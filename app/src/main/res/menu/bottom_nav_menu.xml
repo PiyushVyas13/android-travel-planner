@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_explore"
+        android:icon="@drawable/baseline_explore_24"
+        android:title="@string/title_explore" />
+
+    <item
+        android:id="@+id/navigation_plan"
+        android:icon="@drawable/baseline_add_box_24"
+        android:title="@string/title_plan" />
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_profile"-->
+<!--        android:icon="@drawable/baseline_person_24"-->
+<!--        android:title="@string/title_profile" />-->
+
+</menu>

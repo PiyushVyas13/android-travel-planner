@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Travel Planner</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_explore">Explore</string>
+    <string name="title_plan">Plan</string>
+    <string name="title_profile">Profile</string>
+    <string name="plan_name">Plan Name</string>
+    <string name="plan_name_hint">Enter plan name</string>
+    <string name="plan_date">Plan Date</string>
+    <string name="my_app_name">Wanderer</string>
+</resources>

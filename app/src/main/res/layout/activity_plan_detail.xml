@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+
+    <!-- Trip Details -->
+    <LinearLayout
+        android:id="@+id/trip_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Trip"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/destinations_text_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:drawableStart="@drawable/baseline_location_on_24"
+            android:drawablePadding="7dp"
+            android:layout_height="wrap_content"
+            android:text="Destination"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:id="@+id/dates_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Dates"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            android:drawablePadding="7dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+        <Button
+            android:id="@+id/delete_trip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#D11A2A"
+            android:text="Delete Trip"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/itinerary_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/trip_details_layout"
+        android:text="Your Itinerary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <!-- Itinerary -->
+    <ExpandableListView
+        android:id="@+id/itinerary_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itinerary_title_text_view"
+        android:layout_marginTop="16dp"
+        android:divider="@null"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:dividerHeight="0dp"
+        android:padding="16dp" />
+
+</RelativeLayout>
