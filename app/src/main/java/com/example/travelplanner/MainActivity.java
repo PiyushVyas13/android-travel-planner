@@ -22,7 +22,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.travelplanner.databinding.ActivityMainBinding;
-import com.smarteist.autoimageslider.SliderView;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     AutoCompleteTextView atView;
-    SliderView sliderView;
+
     ArrayAdapter<String> adapter;
     ArrayList<SliderData> sliderDataArrayList;
     TextView destName, destDesc, placesTitle;
@@ -86,12 +86,7 @@ public class MainActivity extends AppCompatActivity {
             for(String url : strings) {
                 sliderDataArrayList.add(new SliderData(url));
             }
-            SliderAdapter sliderAdapter = new SliderAdapter(MainActivity.this, sliderDataArrayList);
-            sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
-            sliderView.setSliderAdapter(sliderAdapter);
-            sliderView.setAutoCycle(true);
-            sliderView.startAutoCycle();
-            Log.i("Async", "onPostExecute");
+
         }
     }
 

@@ -6,29 +6,35 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.example.travelplanner.R;
-import com.smarteist.autoimageslider.SliderViewAdapter;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SliderAdapter extends SliderViewAdapter<SliderAdapter.SliderAdapterViewHolder> {
+public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderAdapterViewHolder> {
 
     // list for storing urls of images.
     private final List<SliderData> mSliderItems;
-
-    // Constructor
+    private final Context context;
+//
+//    // Constructor
     public SliderAdapter(Context context, ArrayList<SliderData> sliderDataArrayList) {
         this.mSliderItems = sliderDataArrayList;
+        this.context = context;
     }
 
-    // We are inflating the slider_layout
-    // inside on Create View Holder method.
+
+
+    @NonNull
     @Override
-    public SliderAdapterViewHolder onCreateViewHolder(ViewGroup parent) {
-        View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.slider_layout, null);
-        return new SliderAdapterViewHolder(inflate);
+    public SliderAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.carousel_item, parent, false);
+        return new SliderAdapterViewHolder(view);
     }
 
     // Inside on bind view holder we will
@@ -46,23 +52,21 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.SliderAdapter
                 .into(viewHolder.imageViewBackground);
     }
 
-    // this method will return
-    // the count of our list.
     @Override
-    public int getCount() {
+    public int getItemCount() {
         return mSliderItems.size();
     }
 
-    static class SliderAdapterViewHolder extends SliderViewAdapter.ViewHolder {
+
+    public static class SliderAdapterViewHolder extends RecyclerView.ViewHolder {
         // Adapter class for initializing
         // the views of our slider view.
-        View itemView;
+
         ImageView imageViewBackground;
 
         public SliderAdapterViewHolder(View itemView) {
             super(itemView);
-            imageViewBackground = itemView.findViewById(R.id.myimage);
-            this.itemView = itemView;
+            imageViewBackground = itemView.findViewById(R.id.imageView);
         }
     }
 }
